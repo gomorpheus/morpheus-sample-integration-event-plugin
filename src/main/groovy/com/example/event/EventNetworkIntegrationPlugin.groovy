@@ -29,7 +29,9 @@ class EventNetworkIntegrationPlugin extends Plugin {
         this.setName("Event Network Integration")
         
 		this.registerProvider(new EventNetworkIntegrationGenericProvider(this,this.morpheus))
-    }
+		this.registerProvider(new EventNetworkManyIntegrationGenericProvider(this,this.morpheus))
+		this.registerProvider(new EventNetworkNoneIntegrationGenericProvider(this,this.morpheus))
+	}
 
     /**
      * Called when a plugin is being removed from the plugin manager (aka Uninstalled)
