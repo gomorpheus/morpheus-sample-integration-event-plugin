@@ -33,6 +33,7 @@ class EventNetworkIntegrationPlugin extends Plugin {
 		this.registerProvider(new EventNetworkNoneIntegrationGenericProvider(this,this.morpheus))
 		this.registerProvider(new EventNetworkManyCloudIntegrationGenericProvider(this,this.morpheus))
 		this.registerProvider(new EventNetworkManyClusterIntegrationGenericProvider(this,this.morpheus))
+		this.registerProvider(new EventNetworkManyAllIntegrationGenericProvider(this,this.morpheus))
 	}
 
     /**
