@@ -26,7 +26,7 @@ class EventNetworkIntegrationPlugin extends Plugin {
 
     @Override
     void initialize() {
-        this.setName("Event Network Integration")
+        this.setName("Event Generic Integration")
         
 		this.registerProvider(new EventNetworkIntegrationGenericProvider(this,this.morpheus))
 		this.registerProvider(new EventNetworkManyIntegrationGenericProvider(this,this.morpheus))
@@ -34,6 +34,9 @@ class EventNetworkIntegrationPlugin extends Plugin {
 		this.registerProvider(new EventNetworkManyCloudIntegrationGenericProvider(this,this.morpheus))
 		this.registerProvider(new EventNetworkManyClusterIntegrationGenericProvider(this,this.morpheus))
 		this.registerProvider(new EventNetworkManyAllIntegrationGenericProvider(this,this.morpheus))
+		this.registerProvider(new EventClusterManyAllIntegrationGenericProvider(this,this.morpheus))
+		this.registerProvider(new EventClusterManyCloudIntegrationGenericProvider(this,this.morpheus))
+		this.registerProvider(new EventClusterManyClusterIntegrationGenericProvider(this,this.morpheus))
 	}
 
     /**
