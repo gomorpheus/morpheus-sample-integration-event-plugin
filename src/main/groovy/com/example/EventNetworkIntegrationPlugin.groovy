@@ -13,8 +13,17 @@
 * See the License for the specific language governing permissions and
 * limitations under the License.
 */
-package com.example.event
+package com.example
 
+import com.example.event.EventClusterManyAllIntegrationGenericProvider
+import com.example.event.EventClusterManyCloudIntegrationGenericProvider
+import com.example.event.EventClusterManyClusterIntegrationGenericProvider
+import com.example.event.EventNetworkIntegrationGenericProvider
+import com.example.event.EventNetworkManyAllIntegrationGenericProvider
+import com.example.event.EventNetworkManyCloudIntegrationGenericProvider
+import com.example.event.EventNetworkManyClusterIntegrationGenericProvider
+import com.example.event.EventNetworkManyIntegrationGenericProvider
+import com.example.event.EventNetworkNoneIntegrationGenericProvider
 import com.morpheusdata.core.Plugin
 
 class EventNetworkIntegrationPlugin extends Plugin {
@@ -37,6 +46,7 @@ class EventNetworkIntegrationPlugin extends Plugin {
 		this.registerProvider(new EventClusterManyAllIntegrationGenericProvider(this,this.morpheus))
 		this.registerProvider(new EventClusterManyCloudIntegrationGenericProvider(this,this.morpheus))
 		this.registerProvider(new EventClusterManyClusterIntegrationGenericProvider(this,this.morpheus))
+		this.registerProvider(new DatastoreTypeTestProvider(this, this.morpheus))
 	}
 
     /**
